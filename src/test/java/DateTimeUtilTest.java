@@ -26,4 +26,11 @@ public class DateTimeUtilTest {
         for(int year: arr)
             assertTrue(DateTimeUtil.isLeapYear(year));
     }
+
+    @Test
+    public void givenYear_not_divisible_by_4_returns_false(){
+        int arr[] = {2017, 2018, 2019};
+        for(int year: arr)
+            assertFalse(DateTimeUtil.isLeapYear(year));
+    }
 }
